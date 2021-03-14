@@ -153,14 +153,15 @@ class TestCard(unittest.TestCase):
 
         '''
         deck7 = hw5_cards.Deck()
-        card = deck7.deal_card()
         lengh_deck7 = len(deck7.cards)
+        card = deck7.deal_card()
+        lengh_deck7_deal = len(deck7.cards)
         deck7.replace_card(card)
         lengh_deck7_replace = len(deck7.cards)
         self.assertEqual(
-            lengh_deck7+1,  lengh_deck7_replace
+            lengh_deck7, lengh_deck7_deal+1, lengh_deck7_replace
         )
-        return   lengh_deck7+1,  lengh_deck7_replace
+        return   lengh_deck7, lengh_deck7_deal+1, lengh_deck7_replace
 
 
         
